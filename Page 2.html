@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&amp;family=Be+Vietnam+Pro:wght@100;300;400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container": "#1f1f22",
+                        "on-primary": "#611200",
+                        "error-container": "#93000a",
+                        "surface-container-low": "#1b1b1e",
+                        "inverse-primary": "#b42900",
+                        "on-secondary-fixed": "#002022",
+                        "surface-container-lowest": "#0e0e11",
+                        "secondary": "#d3fbff",
+                        "primary-container": "#ff562b",
+                        "tertiary-fixed": "#f5d9ff",
+                        "outline": "#ae887f",
+                        "error": "#ffb4ab",
+                        "background": "#131316",
+                        "on-primary-fixed": "#3c0700",
+                        "tertiary": "#e5b4ff",
+                        "inverse-on-surface": "#303033",
+                        "on-tertiary-fixed-variant": "#7000a7",
+                        "surface-dim": "#131316",
+                        "primary": "#ffb4a2",
+                        "on-secondary-fixed-variant": "#004f54",
+                        "on-error": "#690005",
+                        "on-background": "#e4e1e6",
+                        "inverse-surface": "#e4e1e6",
+                        "on-tertiary-container": "#450069",
+                        "surface-container-highest": "#353438",
+                        "on-tertiary": "#4f0077",
+                        "secondary-fixed": "#7df4ff",
+                        "on-secondary-container": "#00686f",
+                        "surface-bright": "#39393c",
+                        "on-primary-container": "#550e00",
+                        "on-primary-fixed-variant": "#891d00",
+                        "surface-variant": "#353438",
+                        "surface-container-high": "#2a2a2d",
+                        "primary-fixed-dim": "#ffb4a2",
+                        "secondary-fixed-dim": "#00dbe9",
+                        "tertiary-fixed-dim": "#e5b4ff",
+                        "surface": "#131316",
+                        "secondary-container": "#00eefc",
+                        "on-error-container": "#ffdad6",
+                        "surface-tint": "#ffb4a2",
+                        "outline-variant": "#5d3f38",
+                        "on-secondary": "#00363a",
+                        "on-tertiary-fixed": "#30004b",
+                        "on-surface-variant": "#e7bdb3",
+                        "on-surface": "#e4e1e6",
+                        "tertiary-container": "#c464ff",
+                        "primary-fixed": "#ffdad2"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "offset-depth": "6px",
+                        "gutter": "24px",
+                        "container-max": "1440px",
+                        "margin": "32px",
+                        "unit": "4px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Space Grotesk"],
+                        "body-md": ["Be Vietnam Pro"],
+                        "headline-md": ["Space Grotesk"],
+                        "display-xl": ["Space Grotesk"],
+                        "label-bold": ["Space Grotesk"],
+                        "body-lg": ["Be Vietnam Pro"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "display-xl": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "700"}],
+                        "label-bold": ["14px", {"lineHeight": "1.0", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .speed-lines {
+            background-image: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255, 62, 0, 0.05) 10px, rgba(255, 62, 0, 0.05) 11px);
+        }
+        .neo-shadow {
+            box-shadow: 6px 6px 0px 0px #000;
+        }
+        .neo-shadow-orange {
+            box-shadow: 6px 6px 0px 0px #ff562b;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary-container selection:text-white">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 border-b-4 border-orange-600 bg-zinc-900/90 backdrop-blur-md flex justify-between items-center px-6 h-20 shadow-[4px_4px_0px_0px_rgba(255,62,0,1)]">
+<div class="flex items-center gap-8">
+<h1 class="text-3xl font-black italic text-orange-600 drop-shadow-[2px_2px_0px_rgba(255,255,255,1)] font-['Space_Grotesk'] tracking-tighter uppercase">SHONEN PULSE</h1>
+<nav class="hidden md:flex gap-6">
+<a class="font-['Space_Grotesk'] font-black uppercase tracking-tighter text-orange-500 border-b-4 border-orange-500 pb-1 hover:skew-x-[-6deg] transition-all" href="#">Series</a>
+<a class="font-['Space_Grotesk'] font-black uppercase tracking-tighter text-white hover:text-orange-400 transition-colors hover:skew-x-[-6deg]" href="#">Movies</a>
+<a class="font-['Space_Grotesk'] font-black uppercase tracking-tighter text-white hover:text-orange-400 transition-colors hover:skew-x-[-6deg]" href="#">Simulcasts</a>
+<a class="font-['Space_Grotesk'] font-black uppercase tracking-tighter text-white hover:text-orange-400 transition-colors hover:skew-x-[-6deg]" href="#">Schedule</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative hidden lg:block">
+<input class="bg-black/50 border-b-2 border-primary-container text-white px-4 py-2 font-label-bold focus:outline-none focus:border-white transition-all w-64" placeholder="SEARCH ANIME..." type="text"/>
+<span class="material-symbols-outlined absolute right-2 top-2 text-primary-container">search</span>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-white cursor-pointer hover:text-orange-500" data-icon="notifications">notifications</span>
+<span class="material-symbols-outlined text-white cursor-pointer hover:text-orange-500" data-icon="person">person</span>
+</div>
+<button class="bg-orange-600 text-black px-6 py-2 font-['Space_Grotesk'] font-black uppercase tracking-widest text-sm hover:skew-x-[-6deg] hover:bg-white transition-all active:translate-x-1 active:translate-y-1 active:shadow-none neo-shadow">UPGRADE</button>
+</div>
+</header>
+<!-- SideNavBar -->
+<aside class="fixed left-0 top-20 h-[calc(100vh-80px)] z-40 bg-black/95 w-64 border-r-4 border-orange-600 shadow-[8px_0px_0px_0px_rgba(255,62,0,0.5)] flex flex-col hidden md:flex">
+<div class="p-6 flex flex-col gap-1 border-b-4 border-black">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 bg-primary-container border-2 border-white flex items-center justify-center rotate-3">
+<span class="material-symbols-outlined text-black" style="font-variation-settings: 'FILL' 1;">bolt</span>
+</div>
+<div>
+<p class="font-['Space_Grotesk'] font-bold uppercase text-orange-600 text-sm">RECRUIT_01</p>
+<p class="font-['Space_Grotesk'] text-xs text-zinc-400">Level 42</p>
+</div>
+</div>
+</div>
+<nav class="flex-1 flex flex-col py-4">
+<a class="text-zinc-400 flex items-center gap-4 p-4 hover:bg-zinc-800 hover:translate-x-2 transition-transform font-['Space_Grotesk'] font-bold uppercase" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span> Home
+            </a>
+<a class="bg-orange-600 text-black flex items-center gap-4 p-4 border-2 border-black rotate-[-1deg] font-['Space_Grotesk'] font-bold uppercase" href="#">
+<span class="material-symbols-outlined" data-icon="bolt">bolt</span> Trending
+            </a>
+<a class="text-zinc-400 flex items-center gap-4 p-4 hover:bg-zinc-800 hover:translate-x-2 transition-transform font-['Space_Grotesk'] font-bold uppercase" href="#">
+<span class="material-symbols-outlined" data-icon="auto_awesome_motion">auto_awesome_motion</span> Library
+            </a>
+<a class="text-zinc-400 flex items-center gap-4 p-4 hover:bg-zinc-800 hover:translate-x-2 transition-transform font-['Space_Grotesk'] font-bold uppercase" href="#">
+<span class="material-symbols-outlined" data-icon="bookmark">bookmark</span> Watchlist
+            </a>
+<a class="text-zinc-400 flex items-center gap-4 p-4 hover:bg-zinc-800 hover:translate-x-2 transition-transform font-['Space_Grotesk'] font-bold uppercase" href="#">
+<span class="material-symbols-outlined" data-icon="history">history</span> History
+            </a>
+</nav>
+<div class="p-6">
+<button class="w-full bg-orange-600 text-black py-4 font-['Space_Grotesk'] font-black uppercase tracking-widest border-2 border-black neo-shadow hover:bg-white transition-all">GO PREMIUM</button>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="md:ml-64 pt-24 pb-20 px-8 min-h-screen">
+<!-- Trending Hero Section -->
+<section class="relative h-[500px] w-full mb-16 overflow-hidden neo-shadow-orange group">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="vibrant neon cityscape at night with futuristic skyscrapers and glowing holographic advertisements in a cybernetic anime style" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDNpG_qXmgI-27IMKHqf4y78wwBZHBACmj0mf8b7IUw5isPt8gs_qu16AJ5_SUnEw_xYDNsR_3KXM7Ukt-1F14RdWc6OHp7JcF5biSXQrVP-OZelTbPwRuCvTi_Dd_NVpw2FS-gEllxbfD0nuM0W84gk_fXhnjUGNMTYGRCyX-hg1O5K62trO_IHaMIX5mYxqAwtAD6-6GqWR_Qkql2kanVr9mA6Zn8CF2upArcxWUKSfokXOJ7cmO718kCHDuN4QJNckztquaQ480')"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-black via-black/60 to-transparent"></div>
+<div class="absolute inset-0 speed-lines opacity-20"></div>
+<div class="relative h-full flex flex-col justify-end p-12 gap-6 max-w-3xl">
+<div class="flex gap-2">
+<span class="bg-primary-container text-black font-label-bold px-3 py-1 skew-x-[-10deg]">#1 TRENDING</span>
+<span class="bg-white text-black font-label-bold px-3 py-1 skew-x-[-10deg]">SEASON PREMIERE</span>
+</div>
+<h2 class="font-display-xl text-white uppercase tracking-tighter leading-none italic drop-shadow-[4px_4px_0px_rgba(255,62,0,1)]">CYBER: GENESIS RECKONING</h2>
+<p class="font-body-lg text-zinc-300 max-w-xl">In a world where memories are currency, one rogue hacker discovers a data-file that could reset humanity's debt—or delete it forever.</p>
+<div class="flex gap-4">
+<button class="bg-orange-600 text-black px-10 py-4 font-headline-md uppercase italic hover:bg-white transition-all neo-shadow flex items-center gap-2">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">play_arrow</span> WATCH NOW
+                    </button>
+<button class="border-4 border-white text-white px-10 py-4 font-headline-md uppercase italic hover:bg-orange-600 hover:border-orange-600 transition-all">
+                        + WATCHLIST
+                    </button>
+</div>
+</div>
+</section>
+<div class="flex flex-col lg:flex-row gap-12">
+<!-- Filter Sidebar -->
+<aside class="lg:w-72 flex-shrink-0 flex flex-col gap-8">
+<div class="bg-surface-container p-6 border-l-4 border-orange-600 neo-shadow">
+<h3 class="font-headline-md text-white uppercase mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-orange-600">filter_list</span> CATEGORIES
+                    </h3>
+<div class="flex flex-wrap gap-2">
+<button class="px-4 py-2 bg-orange-600 text-black font-label-bold uppercase">All Series</button>
+<button class="px-4 py-2 bg-zinc-800 text-zinc-400 font-label-bold uppercase hover:bg-zinc-700 hover:text-white transition-all">Action</button>
+<button class="px-4 py-2 bg-zinc-800 text-zinc-400 font-label-bold uppercase hover:bg-zinc-700 hover:text-white transition-all">Mecha</button>
+<button class="px-4 py-2 bg-zinc-800 text-zinc-400 font-label-bold uppercase hover:bg-zinc-700 hover:text-white transition-all">Supernatural</button>
+<button class="px-4 py-2 bg-zinc-800 text-zinc-400 font-label-bold uppercase hover:bg-zinc-700 hover:text-white transition-all">Shonen</button>
+<button class="px-4 py-2 bg-zinc-800 text-zinc-400 font-label-bold uppercase hover:bg-zinc-700 hover:text-white transition-all">Sci-Fi</button>
+<button class="px-4 py-2 bg-zinc-800 text-zinc-400 font-label-bold uppercase hover:bg-zinc-700 hover:text-white transition-all">Horror</button>
+</div>
+</div>
+<div class="bg-surface-container p-6 border-l-4 border-orange-600 neo-shadow">
+<h3 class="font-headline-md text-white uppercase mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-orange-600">bolt</span> AIRING STATUS
+                    </h3>
+<ul class="flex flex-col gap-3">
+<li class="flex items-center gap-3 font-label-bold text-zinc-400 hover:text-orange-500 cursor-pointer">
+<div class="w-4 h-4 border-2 border-zinc-600"></div> CURRENTLY AIRING
+                        </li>
+<li class="flex items-center gap-3 font-label-bold text-white">
+<div class="w-4 h-4 border-2 border-orange-600 bg-orange-600"></div> COMPLETED
+                        </li>
+<li class="flex items-center gap-3 font-label-bold text-zinc-400 hover:text-orange-500 cursor-pointer">
+<div class="w-4 h-4 border-2 border-zinc-600"></div> ANNOUNCED
+                        </li>
+</ul>
+</div>
+<div class="relative overflow-hidden group">
+<img class="w-full h-48 object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="abstract artistic background with sharp diagonal orange and black lines creating a sense of dynamic speed and energy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDobxFlbk_rQY40XYDbD_0fhUsdYOga90XX0mXqLhRM2EhACKP-1TCriuMwaJMv3HFKKzAAc5oNrfL-AFrWqNlIqJ7drRsrrtp0t5Zz_oPtWSwKT-TYl566Q5JXMNootiztsJOR6fIGnTQQZGe9m114iTukOszjMc0GUZ5qYQYArSQxKXVJrYEfS-kIR5UvJCvvjX-Tba_i7WbK3R230bpXIMSeqt9Q2vuN5Cz6b76eJ0LRqadnGsfPfZ5lr-gr-BQ4goHlWEBZZNc"/>
+<div class="absolute inset-0 bg-orange-600/20 mix-blend-multiply"></div>
+<div class="absolute inset-0 flex flex-col items-center justify-center text-center p-4 border-4 border-orange-600">
+<p class="font-headline-md text-white leading-tight mb-2">UNLEASH THE FURY</p>
+<button class="bg-black text-orange-600 px-4 py-2 font-label-bold uppercase">DISCOVER EXCLUSIVES</button>
+</div>
+</div>
+</aside>
+<!-- Series Grid -->
+<section class="flex-1">
+<div class="flex justify-between items-center mb-8 bg-zinc-900 p-4 border-b-4 border-orange-600">
+<h3 class="font-headline-lg text-white italic uppercase tracking-tighter">ALL SERIES</h3>
+<div class="flex items-center gap-4">
+<span class="text-zinc-500 font-label-bold">SORT BY:</span>
+<select class="bg-black border-2 border-zinc-700 text-white font-label-bold px-4 py-1 focus:border-orange-600 outline-none">
+<option>POPULARITY</option>
+<option>NEWEST</option>
+<option>RATING</option>
+</select>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8">
+<!-- Series Card 1 -->
+<article class="relative group bg-surface-container-low border-2 border-zinc-800 hover:border-orange-600 transition-all hover:-translate-y-2">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-transform duration-500 group-hover:scale-110" data-alt="close-up of a high-tech robotic eye glowing with intense red light and intricate mechanical details in a dark metallic frame" src="https://lh3.googleusercontent.com/aida-public/AB6AXuArPCaTqJCp02eNZdSh_HayzLJevBw4L9hFUq0YMXwIMgjOKrHQJgYSWSOGwsmRtP8pMcD81Wd0Mhen71n99YhH5rFUnoXo_NrPYvUE7t3YbDTRuwNgOgbkAgIpJl1lqHDzRz0Q9VTbUFgXNZ9zaHsh4NucbCoKNg5ygAcUHEeHLJ-ybVkaxFNJoGEv69K3-PSwsJ0RiAhyysDH30BpKd4buhMrI1HIU1nr5KSQon4r-6CipxH3RpXn3vxXjVNmQVT1sHW9B_p6LEU"/>
+<div class="absolute top-4 left-4 bg-orange-600 text-black font-label-bold px-3 py-1 skew-x-[-10deg]">HOT</div>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60"></div>
+</div>
+<div class="p-6 relative">
+<div class="absolute -top-10 right-4 w-16 h-16 bg-white flex flex-col items-center justify-center border-4 border-black rotate-6 group-hover:rotate-0 transition-transform">
+<span class="font-black text-black text-xl">8.9</span>
+<span class="text-[8px] font-bold text-zinc-500">PULSE SCORE</span>
+</div>
+<h4 class="font-headline-md text-white mb-2 group-hover:text-orange-500 transition-colors">VOID RUNNER: ALPHA</h4>
+<div class="flex gap-2 mb-4">
+<span class="text-[10px] bg-zinc-800 text-zinc-400 px-2 py-1 font-bold">SCI-FI</span>
+<span class="text-[10px] bg-zinc-800 text-zinc-400 px-2 py-1 font-bold">MECHA</span>
+</div>
+<button class="w-full py-3 border-2 border-orange-600 text-orange-600 font-label-bold uppercase group-hover:bg-orange-600 group-hover:text-black transition-all">VIEW EPISODES</button>
+</div>
+</article>
+<!-- Series Card 2 -->
+<article class="relative group bg-surface-container-low border-2 border-zinc-800 hover:border-orange-600 transition-all hover:-translate-y-2">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-transform duration-500 group-hover:scale-110" data-alt="dramatic silhouette of a swordsman standing against a massive blood-red moon in a dark stormy night setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0naVl6iethTxhyhiiOnFsxxg-gd3eDX8S-BPlyI5JFawviELaYEjLUNeasoLPwG8xD0UnZnU05n5mK5jaD6WpQeDQvOPqKCONbMRTBMbslhHBxylyiu5OSRTBpPP-qUhp6lUzCb-VzEmcG7sRZX8herP2R2iRhTRw3QIzwJQ0a5c0Xkl_oLrM75h9PuzR5u1Qa5bikQdqv6iVY883cZs1pip2PJ4FiXHhmnP_FaDL_2AZr6mqZV-2Ney_5oWcg1CV2rht4Cz6E34"/>
+<div class="absolute top-4 left-4 bg-cyan-400 text-black font-label-bold px-3 py-1 skew-x-[-10deg]">NEW</div>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60"></div>
+</div>
+<div class="p-6 relative">
+<div class="absolute -top-10 right-4 w-16 h-16 bg-white flex flex-col items-center justify-center border-4 border-black -rotate-6 group-hover:rotate-0 transition-transform">
+<span class="font-black text-black text-xl">9.4</span>
+<span class="text-[8px] font-bold text-zinc-500">PULSE SCORE</span>
+</div>
+<h4 class="font-headline-md text-white mb-2 group-hover:text-orange-500 transition-colors">CRIMSON BLADE</h4>
+<div class="flex gap-2 mb-4">
+<span class="text-[10px] bg-zinc-800 text-zinc-400 px-2 py-1 font-bold">ACTION</span>
+<span class="text-[10px] bg-zinc-800 text-zinc-400 px-2 py-1 font-bold">FANTASY</span>
+</div>
+<button class="w-full py-3 border-2 border-orange-600 text-orange-600 font-label-bold uppercase group-hover:bg-orange-600 group-hover:text-black transition-all">VIEW EPISODES</button>
+</div>
+</article>
+<!-- Series Card 3 -->
+<article class="relative group bg-surface-container-low border-2 border-zinc-800 hover:border-orange-600 transition-all hover:-translate-y-2">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-transform duration-500 group-hover:scale-110" data-alt="spectral glowing ghost figures emerging from a dark Victorian alleyway with misty green ethereal lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCO5Ieh9k7AylulG2QZ3N1ta-ezoOUKp1kt9Q7e7lD3uN2CPqXDfJqK4ezRnEQY8fUut7aKmWXWV4CH59dvhoDHeS5X5gYvBcpLleEKQTFAO6mgWf_pvnetlZqNpEcyKeBAXpXfcF8R-uRsJbD8fL34RdfeKMpO1Wh7HMUjpxMuxReDXL8LjiNosdy4TVSwXQNbPVCqjeNd2B6dQVWuvqgNYh4PEChT7Uo5Lpb3Z3tMyZYq514T3NSkNZhGF93iAeHh8-nnbb_MqI"/>
+<div class="absolute top-4 left-4 bg-orange-600 text-black font-label-bold px-3 py-1 skew-x-[-10deg]">TOP</div>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60"></div>
+</div>
+<div class="p-6 relative">
+<div class="absolute -top-10 right-4 w-16 h-16 bg-white flex flex-col items-center justify-center border-4 border-black rotate-2 group-hover:rotate-0 transition-transform">
+<span class="font-black text-black text-xl">8.2</span>
+<span class="text-[8px] font-bold text-zinc-500">PULSE SCORE</span>
+</div>
+<h4 class="font-headline-md text-white mb-2 group-hover:text-orange-500 transition-colors">GHOST SYNDICATE</h4>
+<div class="flex gap-2 mb-4">
+<span class="text-[10px] bg-zinc-800 text-zinc-400 px-2 py-1 font-bold">HORROR</span>
+<span class="text-[10px] bg-zinc-800 text-zinc-400 px-2 py-1 font-bold">SUPERNATURAL</span>
+</div>
+<button class="w-full py-3 border-2 border-orange-600 text-orange-600 font-label-bold uppercase group-hover:bg-orange-600 group-hover:text-black transition-all">VIEW EPISODES</button>
+</div>
+</article>
+<!-- Row 2 -->
+<article class="relative group bg-surface-container-low border-2 border-zinc-800 hover:border-orange-600 transition-all hover:-translate-y-2">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-transform duration-500 group-hover:scale-110" data-alt="collection of retro vintage computers and monitors glowing with green terminal text in a dark cluttered garage lab" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqo4x40abxyIKnkpfFjCHc_8e4PkTVvPX_Qrk6iL9eSq_f2CiR18wSqc-bdDz-Wi9plyHgualM8gwbXlmUwMPAvFQNbpMpyj3GDLFY2upWO8k-ZlBT5qHYcC-YlfJ5xaGjYN7BanTiKqKdNQo33wMx7JVtYFiGWdnA4x_di-Yv1ywWAwOStIgi_iLx54dTGZb7XRIz30qK9AnGE2gPyTV3HJ6AQ9AJvpBr1ZhOEh_IYkUMh2HvPFF5n0BEaV4-0bJ5TYohXg7pXSM"/>
+<div class="absolute top-4 left-4 bg-purple-600 text-white font-label-bold px-3 py-1 skew-x-[-10deg]">EXCLUSIVE</div>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60"></div>
+</div>
+<div class="p-6 relative">
+<div class="absolute -top-10 right-4 w-16 h-16 bg-white flex flex-col items-center justify-center border-4 border-black rotate-12 group-hover:rotate-0 transition-transform">
+<span class="font-black text-black text-xl">7.9</span>
+<span class="text-[8px] font-bold text-zinc-500">PULSE SCORE</span>
+</div>
+<h4 class="font-headline-md text-white mb-2 group-hover:text-orange-500 transition-colors">MODEM MONSTERS</h4>
+<div class="flex gap-2 mb-4">
+<span class="text-[10px] bg-zinc-800 text-zinc-400 px-2 py-1 font-bold">COMEDY</span>
+<span class="text-[10px] bg-zinc-800 text-zinc-400 px-2 py-1 font-bold">SCI-FI</span>
+</div>
+<button class="w-full py-3 border-2 border-orange-600 text-orange-600 font-label-bold uppercase group-hover:bg-orange-600 group-hover:text-black transition-all">VIEW EPISODES</button>
+</div>
+</article>
+<article class="relative group bg-surface-container-low border-2 border-zinc-800 hover:border-orange-600 transition-all hover:-translate-y-2">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-transform duration-500 group-hover:scale-110" data-alt="vast wasteland desert with giant rusted mechanical gears half-buried in the sand under a scorching white sun" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4Y7NSBlB8UWAwScFPOg0lQSjhBx2BceZvVwL4-xT8rrsCdG-jH-lykwMnC6LFqW-z5Uvc8wXEPiAS6AARZ_cds7NbqnYzYqzyKSSPBxA9-M66yCV7-6dD5nr5jhDBzttu95-QTccIxlf9ZuDnf1KSJNHTaTImW0UXOrHyEzLFFT_YyUHHUpkOe5AiynBwTFPCBvBRTE5pQiVoDOhBVjxnEFbUS6Ph-BCjOAPpef38buHBqpcpwreFsWza00hHdMbuv57GQRWUju8"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60"></div>
+</div>
+<div class="p-6 relative">
+<div class="absolute -top-10 right-4 w-16 h-16 bg-white flex flex-col items-center justify-center border-4 border-black -rotate-3 group-hover:rotate-0 transition-transform">
+<span class="font-black text-black text-xl">8.5</span>
+<span class="text-[8px] font-bold text-zinc-500">PULSE SCORE</span>
+</div>
+<h4 class="font-headline-md text-white mb-2 group-hover:text-orange-500 transition-colors">IRON DUST</h4>
+<div class="flex gap-2 mb-4">
+<span class="text-[10px] bg-zinc-800 text-zinc-400 px-2 py-1 font-bold">ADVENTURE</span>
+<span class="text-[10px] bg-zinc-800 text-zinc-400 px-2 py-1 font-bold">DRAMA</span>
+</div>
+<button class="w-full py-3 border-2 border-orange-600 text-orange-600 font-label-bold uppercase group-hover:bg-orange-600 group-hover:text-black transition-all">VIEW EPISODES</button>
+</div>
+</article>
+<article class="relative group bg-surface-container-low border-2 border-zinc-800 hover:border-orange-600 transition-all hover:-translate-y-2">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-transform duration-500 group-hover:scale-110" data-alt="ethereal underwater scene with a glowing blue jellyfish floating near a submerged sunken city with bright bioluminescent lights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvz3jKdjQW_aVl6n5IFANCuVepTFtaavGd6oILQIKcE3tEAXd48nz0NO7x1lYTIkAFagwCvzflCrAV1Otgz51mNZVbKbyY5eXzAQ_2VaXIPyiqMLsn8kf0NxtagCvnuuVJGLjA_9wEb_C9et0oH3bU_CjM03hW08jdRcGUqMOmi80752NaE2DS0UONF9EfL5HP0DXhpWmH7o63TSGhOYPR_zJZCjbew4JgfQ-AuSFBrvQoILknf4iQk4VofmGjN-hcyCC9Bto8xn8"/>
+<div class="absolute top-4 left-4 bg-orange-600 text-black font-label-bold px-3 py-1 skew-x-[-10deg]">SEASON FINALE</div>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60"></div>
+</div>
+<div class="p-6 relative">
+<div class="absolute -top-10 right-4 w-16 h-16 bg-white flex flex-col items-center justify-center border-4 border-black rotate-6 group-hover:rotate-0 transition-transform">
+<span class="font-black text-black text-xl">9.1</span>
+<span class="text-[8px] font-bold text-zinc-500">PULSE SCORE</span>
+</div>
+<h4 class="font-headline-md text-white mb-2 group-hover:text-orange-500 transition-colors">DEEP BLUE ECHO</h4>
+<div class="flex gap-2 mb-4">
+<span class="text-[10px] bg-zinc-800 text-zinc-400 px-2 py-1 font-bold">FANTASY</span>
+<span class="text-[10px] bg-zinc-800 text-zinc-400 px-2 py-1 font-bold">MYSTERY</span>
+</div>
+<button class="w-full py-3 border-2 border-orange-600 text-orange-600 font-label-bold uppercase group-hover:bg-orange-600 group-hover:text-black transition-all">VIEW EPISODES</button>
+</div>
+</article>
+</div>
+<div class="mt-16 flex justify-center gap-4">
+<button class="w-12 h-12 bg-zinc-800 text-white flex items-center justify-center border-2 border-black hover:bg-orange-600 hover:text-black transition-all"><span class="material-symbols-outlined">chevron_left</span></button>
+<button class="w-12 h-12 bg-orange-600 text-black font-black border-2 border-black">1</button>
+<button class="w-12 h-12 bg-zinc-800 text-white font-black border-2 border-black hover:bg-orange-600 hover:text-black transition-all">2</button>
+<button class="w-12 h-12 bg-zinc-800 text-white font-black border-2 border-black hover:bg-orange-600 hover:text-black transition-all">3</button>
+<button class="w-12 h-12 bg-zinc-800 text-white flex items-center justify-center border-2 border-black hover:bg-orange-600 hover:text-black transition-all"><span class="material-symbols-outlined">chevron_right</span></button>
+</div>
+</section>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full border-t-8 border-double border-orange-600 bg-zinc-950 py-12 px-10 flex flex-col items-center gap-6">
+<div class="flex items-center gap-8 mb-4">
+<h1 class="text-4xl font-black italic text-orange-600 drop-shadow-[2px_2px_0px_rgba(255,255,255,1)] font-['Space_Grotesk'] tracking-tighter uppercase">SHONEN PULSE</h1>
+</div>
+<div class="flex flex-wrap justify-center gap-8 font-['Space_Grotesk'] text-xs font-bold tracking-widest">
+<a class="text-zinc-600 hover:text-white hover:bg-orange-600 px-1 transition-all" href="#">Terms of Service</a>
+<a class="text-zinc-600 hover:text-white hover:bg-orange-600 px-1 transition-all" href="#">Privacy Policy</a>
+<a class="text-zinc-600 hover:text-white hover:bg-orange-600 px-1 transition-all" href="#">Contact Support</a>
+<a class="text-zinc-600 hover:text-white hover:bg-orange-600 px-1 transition-all" href="#">Careers</a>
+</div>
+<p class="font-['Space_Grotesk'] text-[10px] text-zinc-700 font-bold tracking-[0.2em] mt-4 uppercase">© 2024 SHONEN PULSE. ALL RIGHTS RESERVED. UNLEASH THE FURY.</p>
+<div class="flex gap-4 mt-4">
+<div class="w-10 h-10 border-2 border-zinc-800 flex items-center justify-center hover:border-orange-600 hover:text-orange-600 transition-all cursor-pointer">
+<span class="material-symbols-outlined">language</span>
+</div>
+<div class="w-10 h-10 border-2 border-zinc-800 flex items-center justify-center hover:border-orange-600 hover:text-orange-600 transition-all cursor-pointer">
+<span class="material-symbols-outlined">share</span>
+</div>
+<div class="w-10 h-10 border-2 border-zinc-800 flex items-center justify-center hover:border-orange-600 hover:text-orange-600 transition-all cursor-pointer">
+<span class="material-symbols-outlined">mail</span>
+</div>
+</div>
+</footer>
+</body></html>
