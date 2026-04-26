@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>VOID_RECKONING | SHONEN_PULSE</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&amp;family=Be+Vietnam+Pro:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-error-container": "#ffdad6",
+                        "background": "#131316",
+                        "on-surface-variant": "#e7bdb3",
+                        "surface": "#131316",
+                        "secondary-container": "#00eefc",
+                        "on-secondary-fixed": "#002022",
+                        "error-container": "#93000a",
+                        "outline-variant": "#5d3f38",
+                        "on-surface": "#e4e1e6",
+                        "inverse-on-surface": "#303033",
+                        "on-primary-fixed-variant": "#891d00",
+                        "inverse-surface": "#e4e1e6",
+                        "secondary-fixed-dim": "#00dbe9",
+                        "tertiary-fixed-dim": "#e5b4ff",
+                        "on-primary-fixed": "#3c0700",
+                        "primary-container": "#ff562b",
+                        "on-tertiary-container": "#450069",
+                        "inverse-primary": "#b42900",
+                        "on-primary": "#611200",
+                        "tertiary-container": "#c464ff",
+                        "surface-container-highest": "#353438",
+                        "surface-tint": "#ffb4a2",
+                        "tertiary-fixed": "#f5d9ff",
+                        "surface-container-low": "#1b1b1e",
+                        "on-secondary": "#00363a",
+                        "on-primary-container": "#550e00",
+                        "secondary": "#d3fbff",
+                        "on-secondary-container": "#00686f",
+                        "on-background": "#e4e1e6",
+                        "error": "#ffb4ab",
+                        "surface-variant": "#353438",
+                        "surface-container-lowest": "#0e0e11",
+                        "primary-fixed": "#ffdad2",
+                        "surface-container": "#1f1f22",
+                        "primary-fixed-dim": "#ffb4a2",
+                        "on-tertiary-fixed": "#30004b",
+                        "primary": "#ffb4a2",
+                        "on-tertiary-fixed-variant": "#7000a7",
+                        "tertiary": "#e5b4ff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin": "32px",
+                        "unit": "4px",
+                        "container-max": "1440px",
+                        "offset-depth": "6px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "display-xl": ["Space Grotesk"],
+                        "body-md": ["Be Vietnam Pro"],
+                        "headline-lg": ["Space Grotesk"],
+                        "body-lg": ["Be Vietnam Pro"],
+                        "label-bold": ["Space Grotesk"],
+                        "headline-md": ["Space Grotesk"]
+                    },
+                    "fontSize": {
+                        "display-xl": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-lg": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-bold": ["14px", {"lineHeight": "1.0", "fontWeight": "700"}],
+                        "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .speed-lines {
+            background-image: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255, 62, 0, 0.05) 10px, rgba(255, 62, 0, 0.05) 11px);
+        }
+        .skew-fix { transform: skewX(-10deg); }
+        .inner-hologram {
+            box-shadow: inset 0 0 15px rgba(0, 238, 252, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md overflow-x-hidden selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-6 h-20 bg-zinc-950/90 backdrop-blur-md border-b-4 border-zinc-900 shadow-[0px_4px_0px_0px_#FF3E00]">
+<div class="flex items-center gap-8">
+<span class="text-3xl font-black italic text-[#FF3E00] drop-shadow-[2px_2px_0px_rgba(255,255,255,1)] font-['Space_Grotesk'] tracking-tighter uppercase">SHONEN_PULSE</span>
+<div class="hidden md:flex gap-6 items-center">
+<a class="font-['Space_Grotesk'] font-black italic tracking-tighter uppercase text-[#FF3E00] border-b-4 border-[#FF3E00] pb-1 hover:skew-x-[-10deg] hover:bg-[#FF3E00] hover:text-black transition-all duration-100 active:translate-y-1 active:shadow-none" href="#">BROWSE</a>
+<a class="font-['Space_Grotesk'] font-black italic tracking-tighter uppercase text-white hover:text-[#FF3E00] transition-colors hover:skew-x-[-10deg] hover:bg-[#FF3E00] hover:text-black transition-all duration-100 active:translate-y-1 active:shadow-none" href="#">SIMULCASTS</a>
+<a class="font-['Space_Grotesk'] font-black italic tracking-tighter uppercase text-white hover:text-[#FF3E00] transition-colors hover:skew-x-[-10deg] hover:bg-[#FF3E00] hover:text-black transition-all duration-100 active:translate-y-1 active:shadow-none" href="#">SCHEDULE</a>
+<a class="font-['Space_Grotesk'] font-black italic tracking-tighter uppercase text-white hover:text-[#FF3E00] transition-colors hover:skew-x-[-10deg] hover:bg-[#FF3E00] hover:text-black transition-all duration-100 active:translate-y-1 active:shadow-none" href="#">NEWS</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="bg-[#FF3E00] text-black font-['Space_Grotesk'] font-black italic px-4 py-1 skew-x-[-10deg] border-2 border-white hover:bg-white hover:text-[#FF3E00] transition-all">UPGRADE</button>
+<span class="material-symbols-outlined cursor-pointer text-white hover:text-[#FF3E00]">notifications</span>
+<span class="material-symbols-outlined cursor-pointer text-white hover:text-[#FF3E00]">account_circle</span>
+</div>
+</nav>
+<main class="pt-20 min-h-screen">
+<!-- Hero Section: Cinematic Video Player -->
+<section class="relative w-full max-w-[1440px] mx-auto px-4 lg:px-8 pt-8">
+<div class="relative aspect-video w-full bg-black border-4 border-zinc-800 shadow-[offset-depth_offset-depth_0px_0px_rgba(255,62,0,1)] overflow-hidden group">
+<video class="w-full h-full object-cover opacity-60" autoplay muted loop playsinline>
+<source src="videoplayback2.mp4" type="video/mp4">
+</video>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="w-24 h-24 bg-[#FF3E00] text-black flex items-center justify-center border-4 border-white shadow-[8px_8px_0px_0px_#000] cursor-pointer hover:scale-110 active:translate-y-1 transition-all">
+<span class="material-symbols-outlined text-5xl" data-weight="fill">play_arrow</span>
+</div>
+</div>
+<!-- Scanning animation line -->
+<div class="absolute top-0 left-0 w-full h-[2px] bg-secondary-container shadow-[0_0_10px_#00eefc] opacity-50 animate-pulse"></div>
+<!-- Bottom Video Controls Overlay -->
+<div class="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-black to-transparent flex items-end justify-between">
+<div>
+<h1 class="font-display-xl text-display-xl text-white uppercase italic tracking-tighter drop-shadow-md">VOID_RECKONING: EPISODE 24</h1>
+<p class="font-label-bold text-label-bold text-[#FF3E00] uppercase mt-2 bg-black/80 inline-block px-3 py-1 skew-x-[-10deg]">SEASON 01 // THE FINAL ENGINE</p>
+</div>
+<div class="flex gap-4">
+<button class="bg-surface-variant/80 backdrop-blur-md p-2 border-2 border-zinc-700 hover:border-secondary-container">
+<span class="material-symbols-outlined text-white">settings</span>
+</button>
+<button class="bg-surface-variant/80 backdrop-blur-md p-2 border-2 border-zinc-700 hover:border-secondary-container">
+<span class="material-symbols-outlined text-white">fullscreen</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Details & CTAs -->
+<section class="max-w-[1440px] mx-auto px-4 lg:px-8 py-10 grid grid-cols-1 lg:grid-cols-12 gap-8">
+<div class="lg:col-span-8">
+<div class="flex flex-wrap gap-3 mb-6">
+<span class="bg-zinc-800 text-white font-label-bold text-label-bold px-4 py-1 skew-x-[-12deg] border-r-4 border-b-4 border-[#FF3E00]">ACTION</span>
+<span class="bg-zinc-800 text-white font-label-bold text-label-bold px-4 py-1 skew-x-[-12deg] border-r-4 border-b-4 border-secondary-container">SCI-FI</span>
+<span class="bg-zinc-800 text-white font-label-bold text-label-bold px-4 py-1 skew-x-[-12deg] border-r-4 border-b-4 border-tertiary-container">MECHA</span>
+</div>
+<div class="bg-surface-container-low p-8 border-l-8 border-[#FF3E00] relative overflow-hidden speed-lines">
+<p class="font-body-lg text-body-lg text-on-surface leading-relaxed relative z-10">
+                        In the silent depths of Sector 7, the Void Engines roar back to life. Kaelen faces the ultimate choice: surrender the core or witness the collapse of the lunar colonies. As Episode 24 unfolds, the battle for humanity's final frontier reaches its kinetic peak. 
+                    </p>
+</div>
+<div class="flex flex-wrap gap-6 mt-10">
+<button class="flex items-center gap-3 bg-[#FF3E00] text-black font-display-xl text-headline-md px-10 py-4 border-4 border-white shadow-[6px_6px_0px_0px_#000] hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all uppercase">
+                        SUBSCRIBE TO PULSE
+                    </button>
+<button class="flex items-center gap-3 bg-zinc-900 text-[#FF3E00] font-headline-md text-headline-md px-8 py-4 border-4 border-[#FF3E00] hover:bg-[#FF3E00] hover:text-black transition-all uppercase">
+<span class="material-symbols-outlined">add</span>
+                        ADD TO WATCHLIST
+                    </button>
+</div>
+</div>
+<!-- Sidebar Info -->
+<div class="lg:col-span-4 space-y-6">
+<div class="bg-surface-container-high p-6 border-4 border-zinc-800 relative">
+<div class="absolute -top-4 -right-4 bg-secondary-container text-black font-black px-4 py-1 rotate-3 border-2 border-black">
+                        LIVE CHAT ON
+                    </div>
+<h3 class="font-headline-md text-headline-md text-white mb-4 italic">EPISODE STATS</h3>
+<div class="space-y-4">
+<div class="flex justify-between items-center border-b border-zinc-700 pb-2">
+<span class="text-zinc-500 font-label-bold">PULSE SCORE</span>
+<span class="text-[#FF3E00] font-black text-xl">9.8/10</span>
+</div>
+<div class="flex justify-between items-center border-b border-zinc-700 pb-2">
+<span class="text-zinc-500 font-label-bold">VIEWS</span>
+<span class="text-white font-bold">1.2M</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-zinc-500 font-label-bold">AI RATING</span>
+<span class="text-secondary-container font-bold italic">S-TIER</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Episode List Section -->
+<section class="max-w-[1440px] mx-auto px-4 lg:px-8 py-10 border-t-8 border-zinc-900">
+<h2 class="font-display-xl text-headline-lg text-[#FF3E00] uppercase italic tracking-tighter mb-8 flex items-center gap-4">
+                PREVIOUS MISSIONS
+                <div class="h-1 flex-grow bg-[#FF3E00]/20"></div>
+</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+<!-- Episode Card 1 -->
+<div class="bg-surface-container-low border-2 border-zinc-800 group hover:border-[#FF3E00] transition-colors relative">
+<div class="aspect-video overflow-hidden relative">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300" data-alt="High contrast anime still of a space station explosion with orange flames and dark shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUuU_h1Px3A83Tr6VavTAGnuieTp0kC0cw6NZQemxpBEcGP605-6fAnKjo3uQeJ-Go-n2g-5BktRzPtrnf9Cu4EUdJLddIbr719YGJW_CnImcB5CuRqWJ5e5zh7WmWgeFcLO1V10i_2-71sv2DZNPM_6ttwYy_ZFeQPi6fE7CWN3490OtQebInvQKTv9n8xRsiCoTXL841Nizr3O1wJbr-Nb88AX3ix9FZlSVHhB7E_B_Icbu-RbDGU2zR4_NV16A25OuoLKHOE3c"/>
+<div class="absolute top-2 right-2 bg-black/90 text-[#FF3E00] font-label-bold px-2 py-1 border-2 border-[#FF3E00]">EP 23</div>
+</div>
+<div class="p-4">
+<div class="flex justify-between items-start mb-2">
+<h4 class="font-headline-md text-body-lg text-white uppercase group-hover:text-[#FF3E00]">THE SILENT CORE</h4>
+<span class="text-[#FF3E00] font-black bg-black px-2 py-0.5 text-xs">9.4 PULSE</span>
+</div>
+<p class="text-zinc-500 text-sm line-clamp-2">Kaelen uncovers the truth behind the project, while the Resistance prepares for a desperate launch.</p>
+</div>
+</div>
+<!-- Episode Card 2 -->
+<div class="bg-surface-container-low border-2 border-zinc-800 group hover:border-[#FF3E00] transition-colors relative">
+<div class="aspect-video overflow-hidden relative">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300" data-alt="Anime character with glowing eyes facing a fleet of mecha in a dark asteroid belt" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdAhT54CKsnT2u3BbHaDkUt71mBSDR3bOUSEjs5NL-4XbW2j9taHD8lc6sSG4W8-jlham1r0vPmZY3Ha8q4zx8wXVjiZXHxf5yu1mcsjgBW0orQyZzo-Lm3PEiqqrNnvp1vSxgx4yAt_oybVdcmc2LdX7kVKria3jCepVKX5BAHPT3jlhWyfzkjg17x3bS4J-chuCCgOmHdRK5wgXZihmVcGaYwPa6u7EWmcbxEa3gVj2yk8DbpWrIfMUMwXaV8iXv6_rgJjCdPoc"/>
+<div class="absolute top-2 right-2 bg-black/90 text-[#FF3E00] font-label-bold px-2 py-1 border-2 border-[#FF3E00]">EP 22</div>
+</div>
+<div class="p-4">
+<div class="flex justify-between items-start mb-2">
+<h4 class="font-headline-md text-body-lg text-white uppercase group-hover:text-[#FF3E00]">VOID'S EMBRACE</h4>
+<span class="text-[#FF3E00] font-black bg-black px-2 py-0.5 text-xs">9.2 PULSE</span>
+</div>
+<p class="text-zinc-500 text-sm line-clamp-2">A treacherous ambush in the asteroid belt forces a split-second tactical maneuver.</p>
+</div>
+</div>
+<!-- Episode Card 3 -->
+<div class="bg-surface-container-low border-2 border-zinc-800 group hover:border-[#FF3E00] transition-colors relative">
+<div class="aspect-video overflow-hidden relative">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300" data-alt="Cyberpunk city street at night with neon lights and a lone figure in a tech-wear jacket" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgdFxGxcyY3I77CJbuYyBDeZ5_U8sCGjeQLt6PiwLV8D3vMfGFE5ItEMKBrbpmbtn9CCTTX5xwt6PPJzn352FkzZcmsnoJqFUwYEPXj6FIjc0vOJtli5itL1M8QR84x93uBiupBdtXHUm24HbdMsAXNO4rjnrDl5nLho9U2U1rpa2SPGHUvmkrCdceq02MOyWD5LkptWHT7-Fv9KMxNjqfzvDwsiRClT4f5L1C6lrRnefpAmuMHaCQA6ZhxnGU25XX77PSZYirAuo"/>
+<div class="absolute top-2 right-2 bg-black/90 text-[#FF3E00] font-label-bold px-2 py-1 border-2 border-[#FF3E00]">EP 21</div>
+</div>
+<div class="p-4">
+<div class="flex justify-between items-start mb-2">
+<h4 class="font-headline-md text-body-lg text-white uppercase group-hover:text-[#FF3E00]">NEON SHADOWS</h4>
+<span class="text-[#FF3E00] font-black bg-black px-2 py-0.5 text-xs">9.7 PULSE</span>
+</div>
+<p class="text-zinc-500 text-sm line-clamp-2">Infiltration of the capital city becomes a race against time as the city goes dark.</p>
+</div>
+</div>
+<!-- Episode Card 4 -->
+<div class="bg-surface-container-low border-2 border-zinc-800 group hover:border-[#FF3E00] transition-colors relative">
+<div class="aspect-video overflow-hidden relative">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300" data-alt="Dramatic anime scene of two characters clashing swords with energy sparks flying everywhere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBItXU_LiErsCxQrLsOgOvcEPTINT6eUpFwJc_svJ6OrbZQHqpAMT0SRrBM8m8uu3jmOz5fMbVuqIjW_zO3XmYWQ7TawW5cNjJIGq3jWunxRHKSvTYctXk0Kd41AGDH2pWI6aDhjo0lnlNfOiLWzxrFGt_VUTmzyDLIGtFighb-1V-xCyC8DlfUxtyrbyVnAwFIGYLNT7NUjHMm3ofsfwcbSI7itDZ1-Xng5nnypdU9DBBZ9enOWxXdRsH5ZkTsxWhRTTTzOYisbr0"/>
+<div class="absolute top-2 right-2 bg-black/90 text-[#FF3E00] font-label-bold px-2 py-1 border-2 border-[#FF3E00]">EP 20</div>
+</div>
+<div class="p-4">
+<div class="flex justify-between items-start mb-2">
+<h4 class="font-headline-md text-body-lg text-white uppercase group-hover:text-[#FF3E00]">STEEL IMPACT</h4>
+<span class="text-[#FF3E00] font-black bg-black px-2 py-0.5 text-xs">9.0 PULSE</span>
+</div>
+<p class="text-zinc-500 text-sm line-clamp-2">The first major duel between the prototypes shakes the foundations of the lunar base.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Community Section -->
+<section class="max-w-[1440px] mx-auto px-4 lg:px-8 py-10 mb-20">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<div class="lg:col-span-8">
+<h3 class="font-display-xl text-headline-md text-white uppercase italic tracking-tighter mb-6 flex items-center gap-4">
+                        LATEST BATTLE CHATTER
+                        <span class="bg-[#FF3E00] text-black px-3 text-sm not-italic font-black">2.4K COMMENTS</span>
+</h3>
+<div class="space-y-4">
+<!-- Comment Input -->
+<div class="bg-surface-container p-4 border-2 border-zinc-800 focus-within:border-secondary-container transition-colors">
+<textarea class="w-full bg-transparent border-none focus:ring-0 text-white placeholder-zinc-600 resize-none font-body-md" placeholder="JOIN THE CHATTER..."></textarea>
+<div class="flex justify-end mt-2">
+<button class="bg-[#FF3E00] text-black font-black px-6 py-2 uppercase skew-x-[-10deg]">TRANSMIT</button>
+</div>
+</div>
+<!-- Single Comment -->
+<div class="p-4 border-l-4 border-zinc-700 bg-surface-container-low">
+<div class="flex items-center gap-3 mb-2">
+<div class="w-10 h-10 bg-tertiary-container rounded-full overflow-hidden border-2 border-white">
+<img class="w-full h-full object-cover" data-alt="Aggressive anime avatar with spiky hair and glowing eyes" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDT9T22tf1CD9V8MW9Uhk-IxeWglfhi2mrD9DH7OjjqTzubN57wqXWhlBpKIHL_VccdVkXmp1SpG26VIFiHizWOg_TpSuu5mspE048HO08IwWJQc87mx5eH2uv_D4GT3Kg3Ln1UvBPyJ1UC6aRFV92D7KAKFKFBtlzFLVOvrAn7az8ZC-mHsQgcLrILMiAP8liqmdzqUdDWI1ZdSiHxjwj8HFK0wdI_db4Raxh2mEidSAYgHjDDJDGQaNBV6TOMYW2VKN0_wmuC1Og"/>
+</div>
+<div>
+<span class="font-bold text-white">NEO_REBEL_01</span>
+<span class="text-zinc-600 text-xs ml-2">2 MINS AGO</span>
+</div>
+</div>
+<p class="text-on-surface">EPISODE 24 WAS INSANE! That mecha transformation in the third act? Absolutely peak fiction. pulse.tv delivering once again.</p>
+</div>
+<!-- Single Comment -->
+<div class="p-4 border-l-4 border-[#FF3E00] bg-surface-container-low">
+<div class="flex items-center gap-3 mb-2">
+<div class="w-10 h-10 bg-secondary-container rounded-full overflow-hidden border-2 border-white">
+<img class="w-full h-full object-cover" data-alt="Futuristic anime girl avatar with blue hair and tech visor" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfx0B_l7WlCesjyd6Giqkz324X98Qi76qYW_IDQx9azUcwe6_2YqLTKRJ2iGPs7Ks1VJBWp3mULDg55kk-Rb5ustXi4TUeoAJpzy1Utrv8jKRW625CtW9hDFjqEMdMbhetmvj1h_5XYlhB12NWKFJtOh3oOyvPqt_ETpw6oTTz6Kxf7s0OUMbkzxi3YiU6E2ijB9MNL_HqV427GiV2RsuOe692_VhAbdemfxbBClQHR6Zi8aL3TMgmaKh3_T9UpkC8sMyAvbz79hc"/>
+</div>
+<div>
+<span class="font-bold text-[#FF3E00]">MECHA_MAIDEN</span>
+<span class="text-zinc-600 text-xs ml-2">15 MINS AGO</span>
+</div>
+</div>
+<p class="text-on-surface">Wait, did anyone notice the cameo at 14:32? Is that the pilot from the Season 0 prologue? My mind is blown.</p>
+</div>
+</div>
+</div>
+<div class="lg:col-span-4">
+<div class="sticky top-24 space-y-6">
+<div class="bg-[#FF3E00] text-black p-6 border-4 border-black relative skew-x-[-2deg]">
+<h4 class="font-black italic text-xl uppercase mb-2">PULSE RECOMMENDATION</h4>
+<p class="font-bold mb-4">You watched VOID_RECKONING. You might also like:</p>
+<div class="bg-black text-white p-4 flex gap-4 items-center">
+<div class="w-16 h-16 bg-zinc-800 flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Thumbnail of an action anime poster with a red and black color scheme" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZKXVb4r8h-pClB8oLdFI3tSZFy8oIFtrw0lR1773jd3JpcbbEaQnTQInytg_3IVhlgdVKEz84eGab590NeIxnPRICI-TqdXRxV7-XEI8Fr6V74rTHko2eBwp7sB0IcTKoP7-QPURzE_-BRoKBk_YC64E19BLrm5MVxtJ3WmSE8B5xfN-5GW-tyR62rirArlBkMYMR5OeFZne3DzlpN_O-ZVWtLwHkKdfE1M5hhYWoE_wL5g_DZYEmA61lTU1Hen1_I6xfheiWZVg"/>
+</div>
+<div>
+<p class="font-black italic">CYBER_DRIVE</p>
+<span class="text-xs text-[#FF3E00]">SEASON 02 PREMIERE</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 px-8 flex flex-col md:flex-row justify-between items-center gap-6 bg-zinc-950 border-t-8 border-zinc-900">
+<div class="flex flex-col items-center md:items-start gap-4">
+<span class="text-xl font-black text-[#FF3E00] font-['Space_Grotesk'] uppercase tracking-tighter">SHONEN_PULSE</span>
+<p class="font-['Space_Grotesk'] font-bold uppercase tracking-widest text-xs text-zinc-500">© 2024 SHONEN_PULSE. UNLEASH THE HYPERDRIVE.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6">
+<a class="font-['Space_Grotesk'] font-bold uppercase tracking-widest text-xs text-zinc-500 hover:text-white transition-colors" href="#">TERMS OF SERVICE</a>
+<a class="font-['Space_Grotesk'] font-bold uppercase tracking-widest text-xs text-zinc-500 hover:text-white transition-colors" href="#">PRIVACY POLICY</a>
+<a class="font-['Space_Grotesk'] font-bold uppercase tracking-widest text-xs text-zinc-500 hover:text-white transition-colors" href="#">SUPPORT</a>
+<a class="font-['Space_Grotesk'] font-bold uppercase tracking-widest text-xs text-zinc-500 hover:text-white transition-colors" href="#">DMCA</a>
+<a class="font-['Space_Grotesk'] font-bold uppercase tracking-widest text-xs text-zinc-500 hover:text-white transition-colors" href="#">ADVERTISE</a>
+</div>
+</footer>
+<!-- FAB Suppression: Details Page should suppress FAB -->
+</body></html>
