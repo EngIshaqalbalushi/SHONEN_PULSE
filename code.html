@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SHONEN_PULSE | UNCOMPROMISINGLY BOLD</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&amp;family=Be+Vietnam+Pro:wght@100;300;400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-fixed-dim": "#ffb4a2",
+                        "on-background": "#e4e1e6",
+                        "secondary-fixed": "#7df4ff",
+                        "outline": "#ae887f",
+                        "inverse-surface": "#e4e1e6",
+                        "surface-container": "#1f1f22",
+                        "secondary": "#d3fbff",
+                        "error": "#ffb4ab",
+                        "surface": "#131316",
+                        "on-tertiary-fixed-variant": "#7000a7",
+                        "surface-container-highest": "#353438",
+                        "on-surface-variant": "#e7bdb3",
+                        "on-tertiary-container": "#450069",
+                        "tertiary-fixed-dim": "#e5b4ff",
+                        "tertiary": "#e5b4ff",
+                        "on-error": "#690005",
+                        "on-tertiary-fixed": "#30004b",
+                        "on-secondary-container": "#00686f",
+                        "on-primary-fixed": "#3c0700",
+                        "tertiary-fixed": "#f5d9ff",
+                        "surface-tint": "#ffb4a2",
+                        "surface-bright": "#39393c",
+                        "outline-variant": "#5d3f38",
+                        "inverse-primary": "#b42900",
+                        "on-surface": "#e4e1e6",
+                        "primary-container": "#ff562b",
+                        "surface-container-high": "#2a2a2d",
+                        "tertiary-container": "#c464ff",
+                        "surface-variant": "#353438",
+                        "secondary-container": "#00eefc",
+                        "secondary-fixed-dim": "#00dbe9",
+                        "on-error-container": "#ffdad6",
+                        "surface-container-low": "#1b1b1e",
+                        "on-tertiary": "#4f0077",
+                        "on-primary-container": "#550e00",
+                        "background": "#131316",
+                        "surface-dim": "#131316",
+                        "on-primary": "#611200",
+                        "primary-fixed": "#ffdad2",
+                        "surface-container-lowest": "#0e0e11",
+                        "on-secondary-fixed-variant": "#004f54",
+                        "inverse-on-surface": "#303033",
+                        "error-container": "#93000a",
+                        "on-secondary": "#00363a",
+                        "on-secondary-fixed": "#002022",
+                        "on-primary-fixed-variant": "#891d00",
+                        "primary": "#ffb4a2"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "4px",
+                        "gutter": "24px",
+                        "container-max": "1440px",
+                        "offset-depth": "6px",
+                        "margin": "32px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Space Grotesk"],
+                        "headline-md": ["Space Grotesk"],
+                        "body-lg": ["Be Vietnam Pro"],
+                        "display-xl": ["Space Grotesk"],
+                        "label-bold": ["Space Grotesk"],
+                        "body-md": ["Be Vietnam Pro"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "display-xl": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "700"}],
+                        "label-bold": ["14px", {"lineHeight": "1.0", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .manga-skew {
+            clip-path: polygon(0 0, 100% 0, 95% 100%, 0% 100%);
+        }
+        .speed-lines {
+            background-image: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255, 62, 0, 0.05) 10px, rgba(255, 62, 0, 0.05) 11px);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-6 h-20 max-w-[1440px] left-1/2 -translate-x-1/2 bg-neutral-950/90 backdrop-blur-md border-b-4 border-[#FF3E00] shadow-[8px_8px_0px_0px_rgba(255,62,0,0.3)]">
+<div class="flex items-center gap-8">
+<a class="text-3xl font-black text-[#FF3E00] drop-shadow-[3px_3px_0px_#FFFFFF] font-['Space_Grotesk'] italic uppercase tracking-tighter" href="#">SHONEN_PULSE</a>
+<nav class="hidden md:flex gap-6">
+<a class="text-[#FF3E00] border-b-4 border-[#FF3E00] pb-1 font-['Space_Grotesk'] font-black uppercase tracking-tighter italic" href="#">LATEST</a>
+<a class="text-white/80 hover:text-[#FF3E00] transition-colors font-['Space_Grotesk'] font-black uppercase tracking-tighter italic" href="#">SERIES</a>
+<a class="text-white/80 hover:text-[#FF3E00] transition-colors font-['Space_Grotesk'] font-black uppercase tracking-tighter italic" href="#">MANGA</a>
+<a class="text-white/80 hover:text-[#FF3E00] transition-colors font-['Space_Grotesk'] font-black uppercase tracking-tighter italic" href="#">COMMUNITY</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="hidden lg:flex items-center bg-surface-container-high px-4 py-2 border-2 border-outline-variant">
+<span class="material-symbols-outlined text-primary" data-icon="search">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-label-bold font-label-bold placeholder:text-neutral-500 uppercase" placeholder="SEARCH ARCHIVES..." type="text"/>
+</div>
+<button class="bg-[#FF3E00] text-black font-['Space_Grotesk'] font-black uppercase tracking-tighter italic px-6 py-2 shadow-[4px_4px_0px_0px_white] hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all duration-100">JOIN THE SQUAD</button>
+</div>
+</header>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative h-[921px] overflow-hidden flex items-center">
+<div class="absolute inset-0 z-0">
+<video class="w-full h-full object-cover grayscale brightness-50" autoplay muted loop playsinline>
+<source src="videoplayback.mp4" type="video/mp4">
+</video>
+<div class="absolute inset-0 bg-gradient-to-r from-background via-transparent to-transparent opacity-90"></div>
+<div class="absolute inset-0 speed-lines opacity-30"></div>
+</div>
+<div class="container mx-auto px-6 relative z-10">
+<div class="max-w-4xl space-y-6">
+<div class="inline-block bg-[#FF3E00] text-black font-label-bold px-4 py-1 skew-x-[-12deg] mb-4">
+                        SYSTEM STATUS: ACTIVE // HYPERDRIVE
+                    </div>
+<h1 class="font-display-xl text-display-xl uppercase italic tracking-tighter text-white drop-shadow-[6px_6px_0px_#FF3E00] leading-none">
+                        SHONEN <br/> <span class="text-[#FF3E00] drop-shadow-[6px_6px_0px_white]">HYPERDRIVE</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl border-l-4 border-[#FF3E00] pl-6 py-2">
+                        Experience the next evolution of combat storytelling. Uncensored, uncompromised, and undeniably loud. 
+                        Stream the pulse of the underground directly to your neural interface.
+                    </p>
+<div class="flex flex-wrap gap-6 pt-8">
+<button class="bg-[#FF3E00] text-black font-display-xl text-[24px] px-10 py-4 shadow-[8px_8px_0px_0px_white] hover:shadow-none hover:translate-x-2 hover:translate-y-2 transition-all active:scale-95 uppercase italic">JOIN THE FIGHT</button>
+<button class="border-4 border-white text-white font-display-xl text-[24px] px-10 py-4 shadow-[8px_8px_0px_0px_#FF3E00] hover:shadow-none hover:translate-x-2 hover:translate-y-2 transition-all active:scale-95 uppercase italic flex items-center gap-3">
+<span class="material-symbols-outlined" data-weight="fill">play_arrow</span> WATCH TRAILER
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Latest Transmissions (Bento Grid) -->
+<section class="py-24 container mx-auto px-6">
+<div class="flex justify-between items-end mb-12 border-b-8 border-surface-container-highest pb-4">
+<h2 class="font-headline-lg text-headline-lg italic uppercase tracking-tighter">LATEST_TRANSMISSIONS</h2>
+<a class="text-primary font-label-bold hover:tracking-widest transition-all" href="#">VIEW ALL LOGS //</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 h-auto md:h-[600px]">
+<div class="md:col-span-8 group relative overflow-hidden border-2 border-outline-variant hover:border-primary transition-colors cursor-pointer">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 scale-105 group-hover:scale-100" data-alt="dramatic close-up of an anime cyborg warrior with glowing red eyes and heavy metallic detail in a rainy urban environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyDnWmot3FYGedmxrKlWVVDwxgwEQtxgIr0_-a2f-oRxtsvqTbojGH4tDWJ6PFFwF9QSp5Jp6uEfk-nW0wJs6LsqBsY6tLEGcJ7zT2zGmooN-kYszYvQUEykLgYc-dhEIHpPUoCnEA4gVJmXF7Hc7_VOvkhB1wO06YrPmEhTWyzZIcftaY0bAqtZKCnzcVbAQnKuJXy2_4xw7Yq_5Y25ZCq0fljztJR7MufOYXZ98tmKdwjurawqmfnA8sST2BGh417DvUtoYDmFA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-neutral-950 via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8 space-y-2">
+<span class="bg-primary-container text-on-primary-container font-label-bold px-3 py-1">PREMIERE</span>
+<h3 class="text-3xl font-headline-lg uppercase italic">VOID_RECKONING: EPISODE 24</h3>
+<p class="text-on-surface-variant max-w-md">The final barrier falls as Reex Void unearths the core of the pulse.</p>
+</div>
+</div>
+<div class="md:col-span-4 flex flex-col gap-6">
+<div class="flex-1 group relative overflow-hidden border-2 border-outline-variant hover:border-primary cursor-pointer">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all" data-alt="vibrant manga art style city street at night with neon lights and futuristic vehicles" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjJ-mz2dX6vuzyTXV1vaKSMOALpv-Jiuwe_xZbc66YhFoM1ul-oX9sHF_cN-PlmK_zXge1xdg-uJrynPs269CVdAXmNXo0j5Bf3LttC8hd4BJXaD_8zwosGpkyxxXylm2Ps9A0Md3bCtTo1n6mN-EsZkt_V7R8TSm7D4R0150PUjqenarhQ2W1f_w04wQW_1TUFepeSraUzCe8zXzorDusMvSu7lxxFNC7qIZtk2ZmHUY9dWa4JByKyT_RwvtxVwhfQy14B9bKbLo"/>
+<div class="absolute bottom-0 left-0 p-4 bg-neutral-950/80 backdrop-blur w-full">
+<h4 class="font-headline-md text-sm uppercase italic">CITY_GHOST_SYNDICATE // NEW SERIES</h4>
+</div>
+</div>
+<div class="flex-1 group relative overflow-hidden border-2 border-outline-variant hover:border-primary cursor-pointer">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all" data-alt="hand-drawn manga sketch of a high-speed chase scene with explosive action lines" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIP2y4yNmJJ2DWW5eBYda54_pbtRy0COOv-GqAYp8G-SBTdIPKThmPJo354f4LHTHHizPBEgBx488UmNev0ltm6XJQKXILX50SEJhMaVTju4VPjZYSRmXBmuokDtZddKIGyumrS59jv3fnQsL6tk3aZ9hvJ6lJVm8sEJ0wlc9EIydfdvl1vqqzXXrbc35a9A8cs-6XSlEQTf-W03YBdR2r6H3lHiqFc75-8prt4_zViC8CMsnLJ7y86ep5Ru_ZZxmsf_WZEv7avhk"/>
+<div class="absolute bottom-0 left-0 p-4 bg-neutral-950/80 backdrop-blur w-full">
+<h4 class="font-headline-md text-sm uppercase italic">MANGA_UPDATE: PULSE_ZERO VOL. 12</h4>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- The Strike Force (Character Profiles) -->
+<section class="bg-surface-container-lowest py-24 border-y-4 border-primary">
+<div class="container mx-auto px-6">
+<div class="mb-16 text-center">
+<h2 class="font-display-xl text-5xl italic uppercase text-primary mb-2">THE_STRIKE_FORCE</h2>
+<p class="text-on-surface-variant tracking-[0.2em] font-label-bold uppercase">SELECT_YOUR_OPERATIVE</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+<!-- KAI_PULSE -->
+<div class="relative group">
+<div class="absolute inset-0 bg-primary translate-x-3 translate-y-3 -z-10 transition-transform group-hover:translate-x-0 group-hover:translate-y-0"></div>
+<div class="bg-surface-container-high border-2 border-primary p-8 space-y-6">
+<div class="aspect-square bg-neutral-900 overflow-hidden border-b-4 border-primary">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="stylized anime portrait of a male hero with orange hair and tech-visors, sharp jawline, high-contrast shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCK1fZC8Nf8fFOBpSjxlFzKRGBBA7gZN_BNEb4HbVYId6eP-sK7XiHALGRbuTnccwB5uJjwwaMHUdNjDnRa7f1r-jLLJW-p-qOCelhN8nhwuIQbbYhVe6_bvxlyXaKGlKkAIhp3ez-RVDmmXO3zXdLBXVtssR7a7Y_DrOnr1LJQibWW4qB2bXBPybagMfN8o04vH8KLTIhZt9Nif5_04weUwJoo39yUITBgvPfOsoCxT0sb-f3cLFAErA51NTfEzpZwYA2UxUWLTdg"/>
+</div>
+<div>
+<h3 class="font-headline-lg text-3xl italic uppercase text-white mb-1">KAI_PULSE</h3>
+<div class="flex gap-2">
+<span class="text-[10px] bg-black text-primary px-2 border border-primary">STRIKER</span>
+<span class="text-[10px] bg-black text-primary px-2 border border-primary">VANGUARD</span>
+</div>
+</div>
+<p class="text-body-md text-on-surface-variant italic">Lead operative of the Pulse Squad. Specialist in high-velocity kinetic energy manipulation.</p>
+<button class="w-full border-2 border-primary text-primary font-label-bold py-3 hover:bg-primary hover:text-black transition-all uppercase flex justify-between px-4 items-center">
+                                DATA_FILE <span class="material-symbols-outlined">terminal</span>
+</button>
+</div>
+</div>
+<!-- MIKO_CORE -->
+<div class="relative group lg:translate-y-12">
+<div class="absolute inset-0 bg-white translate-x-3 translate-y-3 -z-10 transition-transform group-hover:translate-x-0 group-hover:translate-y-0"></div>
+<div class="bg-surface-container-high border-2 border-white p-8 space-y-6">
+<div class="aspect-square bg-neutral-900 overflow-hidden border-b-4 border-white">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="anime girl with holographic blue hair and intricate cybernetic eye, wearing futuristic streetwear" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAr0WViHwT2ijaGukzQmAy3LbdQqjGvz8tYeX5xZjcbQv6Kik-paP35CV-UDnRluYAY-ewetG6X50w088vprXvbpR1kPpR2SHHFgJYkZvsBGS3RPKt-fHDJeYflwe9Lc0Op7hon672LRzCiW9rqrJkZ4e9fCgWTDFBNZFPHH_I_WXA5kCwkuWGcLcFyGHGEyR6u5Lwld1sZnqSJNTIV1BikCNMb_8qBjbJQ_B0Rd_0QiRSnlByY4t0SDlG2OcOGk2B4nitHhZLT7y4"/>
+</div>
+<div>
+<h3 class="font-headline-lg text-3xl italic uppercase text-white mb-1">MIKO_CORE</h3>
+<div class="flex gap-2">
+<span class="text-[10px] bg-black text-white px-2 border border-white">NAVIGATOR</span>
+<span class="text-[10px] bg-black text-white px-2 border border-white">INTELLIGENCE</span>
+</div>
+</div>
+<p class="text-body-md text-on-surface-variant italic">Master architect of the digital battlefield. Controls the flow of tactical information.</p>
+<button class="w-full border-2 border-white text-white font-label-bold py-3 hover:bg-white hover:text-black transition-all uppercase flex justify-between px-4 items-center">
+                                DATA_FILE <span class="material-symbols-outlined">hub</span>
+</button>
+</div>
+</div>
+<!-- REEX_VOID -->
+<div class="relative group">
+<div class="absolute inset-0 bg-primary translate-x-3 translate-y-3 -z-10 transition-transform group-hover:translate-x-0 group-hover:translate-y-0"></div>
+<div class="bg-surface-container-high border-2 border-primary p-8 space-y-6">
+<div class="aspect-square bg-neutral-900 overflow-hidden border-b-4 border-primary">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="dark mysterious anime figure wearing a hooded tech-cloak with violet glowing runes, atmospheric shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaMDu8FpLWrEHUGHU2ItdZH8-LM1YzIPLLmQ1L-t9ym66ysPrwrCM8aPODJ0rCSa0TMvTf8cek24s_Da7Cm8QC1p0X_BYM_LeNpBxdtfm5zb2Es1KSGW7AlS_Np0J8Jcutx-24DuiQn98H_Q_lYtIzyQHVD4eSh7zb1RnW3BiIFNQzbB-VXbG9QQFI515QTgVNp8xCVg0aK5d9oR4GzKj0cPhjcVqR5th1DdT67YwkkLLFxUo5yMOqeeRt1hjQe6NilOWkgjqGh2M"/>
+</div>
+<div>
+<h3 class="font-headline-lg text-3xl italic uppercase text-white mb-1">REEX_VOID</h3>
+<div class="flex gap-2">
+<span class="text-[10px] bg-black text-primary px-2 border border-primary">ASSASSIN</span>
+<span class="text-[10px] bg-black text-primary px-2 border border-primary">STEALTH</span>
+</div>
+</div>
+<p class="text-body-md text-on-surface-variant italic">An anomaly in the system. Operates within the silence between pulses. Lethal and unseen.</p>
+<button class="w-full border-2 border-primary text-primary font-label-bold py-3 hover:bg-primary hover:text-black transition-all uppercase flex justify-between px-4 items-center">
+                                DATA_FILE <span class="material-symbols-outlined">visibility_off</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Pricing/Membership Section -->
+<section class="py-32 container mx-auto px-6 relative overflow-hidden">
+<div class="absolute top-0 right-0 w-1/2 h-full speed-lines -skew-x-12 opacity-10 -z-10"></div>
+<div class="max-w-5xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+<div>
+<h2 class="font-display-xl text-6xl uppercase italic text-white drop-shadow-[4px_4px_0px_#FF3E00] leading-none mb-6">TRANSCEND_ <br/> REALITY</h2>
+<p class="text-body-lg text-on-surface-variant mb-8 border-r-8 border-primary pr-8 text-right md:text-left">Unlock the full bandwidth of SHONEN_PULSE. No ads, high-fidelity streams, and exclusive access to the dark archives.</p>
+<div class="space-y-4">
+<div class="flex items-center gap-4 text-primary font-label-bold">
+<span class="material-symbols-outlined" data-weight="fill">verified</span>
+                                4K ULTRA-MOTION STREAMING
+                            </div>
+<div class="flex items-center gap-4 text-primary font-label-bold">
+<span class="material-symbols-outlined" data-weight="fill">verified</span>
+                                DAY-ZERO MANGA DROPS
+                            </div>
+<div class="flex items-center gap-4 text-primary font-label-bold">
+<span class="material-symbols-outlined" data-weight="fill">verified</span>
+                                EXCLUSIVE MEMBER MERCH BATTLES
+                            </div>
+</div>
+</div>
+<div class="space-y-8">
+<!-- Tier 1 -->
+<div class="bg-surface-container-high border-2 border-outline-variant p-1 shadow-[10px_10px_0px_0px_#353438] hover:shadow-[10px_10px_0px_0px_#FF3E00] transition-all group">
+<div class="p-6 flex justify-between items-center">
+<div>
+<h4 class="font-headline-md uppercase italic text-white">BASIC_UNIT</h4>
+<p class="text-on-surface-variant text-sm">STANDARD_ACCESS</p>
+</div>
+<div class="text-right">
+<span class="text-3xl font-display-xl italic">$9.99</span>
+<p class="text-[10px] text-on-surface-variant">/ MONTH</p>
+</div>
+</div>
+<button class="w-full bg-surface-container-highest py-4 font-label-bold uppercase group-hover:bg-[#FF3E00] group-hover:text-black transition-colors">INITIALIZE_LINK</button>
+</div>
+<!-- Tier 2 -->
+<div class="bg-surface-container-high border-4 border-primary p-1 shadow-[10px_10px_0px_0px_#FF3E00] hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all relative">
+<div class="absolute -top-4 right-8 bg-white text-black font-label-bold text-[10px] px-3 py-1 skew-x-[-15deg]">RECOMMENDED_GEAR</div>
+<div class="p-6 flex justify-between items-center">
+<div>
+<h4 class="font-headline-md uppercase italic text-primary">PULSE_ELITE</h4>
+<p class="text-on-surface-variant text-sm">ULTIMATE_COMMAND</p>
+</div>
+<div class="text-right">
+<span class="text-4xl font-display-xl italic text-primary">$14.99</span>
+<p class="text-[10px] text-on-surface-variant">/ MONTH</p>
+</div>
+</div>
+<button class="w-full bg-primary py-4 font-label-bold uppercase text-black hover:bg-white transition-colors">ASCEND_NOW</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-neutral-950 border-t-8 border-[#FF3E00] skew-y-[-1deg] mt-24">
+<div class="skew-y-[1deg] w-full py-12 px-8 flex flex-col md:flex-row justify-between items-center gap-8 max-w-[1440px] mx-auto">
+<div class="space-y-4 text-center md:text-left">
+<div class="text-xl font-black text-[#FF3E00] font-['Space_Grotesk'] italic uppercase tracking-tighter">SHONEN_PULSE</div>
+<p class="text-neutral-400 font-['Space_Grotesk'] font-bold uppercase text-sm">© 2024 SHONEN_PULSE. UNCOMPROMISINGLY BOLD.</p>
+</div>
+<nav class="flex flex-wrap justify-center gap-12">
+<a class="text-neutral-400 hover:text-[#FF3E00] hover:tracking-widest transition-all font-['Space_Grotesk'] font-bold uppercase" href="#">MANIFESTO</a>
+<a class="text-neutral-400 hover:text-[#FF3E00] hover:tracking-widest transition-all font-['Space_Grotesk'] font-bold uppercase" href="#">BATTLE_LOG</a>
+<a class="text-neutral-400 hover:text-[#FF3E00] hover:tracking-widest transition-all font-['Space_Grotesk'] font-bold uppercase" href="#">LEGAL_GEAR</a>
+<a class="text-neutral-400 hover:text-[#FF3E00] hover:tracking-widest transition-all font-['Space_Grotesk'] font-bold uppercase" href="#">RECRUITMENT</a>
+</nav>
+<div class="flex gap-4">
+<div class="w-10 h-10 border-2 border-[#FF3E00] flex items-center justify-center text-[#FF3E00] hover:bg-[#FF3E00] hover:text-black transition-all cursor-pointer">
+<span class="material-symbols-outlined">share</span>
+</div>
+<div class="w-10 h-10 border-2 border-[#FF3E00] flex items-center justify-center text-[#FF3E00] hover:bg-[#FF3E00] hover:text-black transition-all cursor-pointer">
+<span class="material-symbols-outlined">chat</span>
+</div>
+<div class="w-10 h-10 border-2 border-[#FF3E00] flex items-center justify-center text-[#FF3E00] hover:bg-[#FF3E00] hover:text-black transition-all cursor-pointer">
+<span class="material-symbols-outlined">rss_feed</span>
+</div>
+</div>
+</div>
+</footer>
+</body></html>
