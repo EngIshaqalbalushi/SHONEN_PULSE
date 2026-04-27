@@ -20,6 +20,7 @@ stitch_anime_motion_portal/
 ├── Page 4.html         # Browse page
 ├── Page 5.html         # News page
 ├── Page 6.html         # Services page
+├── Page 7.html         # Vault system
 ├── README.md           # Project documentation
 ├── video3.mp4          # Background video for Page 6
 ├── videoplayback.mp4   # Background video for homepage
@@ -38,6 +39,7 @@ All pages are fully linked with consistent navigation:
 - **BROWSE** (Page 4.html) - Browse and simulcast schedule
 - **NEWS** (Page 5.html) - Latest news and updates
 - **SERVICES** (Page 6.html) - Platform services and features
+- **VAULT** (Page 7.html) - Secure vault system
 
 ## 🛠️ Technologies Used
 
