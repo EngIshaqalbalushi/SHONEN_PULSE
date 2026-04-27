@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SHOGUN_STREAM | SIMULCAST_SCHEDULE</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&amp;family=Be+Vietnam+Pro:wght@100;300;400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-tint": "#ffb4a2",
+                    "on-primary-fixed-variant": "#891d00",
+                    "secondary-fixed-dim": "#00dbe9",
+                    "on-surface": "#e4e1e6",
+                    "secondary-fixed": "#7df4ff",
+                    "tertiary": "#e5b4ff",
+                    "outline": "#ae887f",
+                    "outline-variant": "#5d3f38",
+                    "primary-container": "#ff562b",
+                    "surface-container-highest": "#353438",
+                    "primary": "#ffb4a2",
+                    "primary-fixed-dim": "#ffb4a2",
+                    "on-primary-fixed": "#3c0700",
+                    "tertiary-fixed-dim": "#e5b4ff",
+                    "surface-bright": "#39393c",
+                    "primary-fixed": "#ffdad2",
+                    "secondary-container": "#00eefc",
+                    "surface": "#131316",
+                    "on-primary-container": "#550e00",
+                    "on-error-container": "#ffdad6",
+                    "error-container": "#93000a",
+                    "on-tertiary-container": "#450069",
+                    "on-secondary-fixed-variant": "#004f54",
+                    "error": "#ffb4ab",
+                    "tertiary-container": "#c464ff",
+                    "surface-variant": "#353438",
+                    "on-secondary": "#00363a",
+                    "tertiary-fixed": "#f5d9ff",
+                    "on-secondary-container": "#00686f",
+                    "background": "#131316",
+                    "surface-dim": "#131316",
+                    "surface-container-lowest": "#0e0e11",
+                    "on-error": "#690005",
+                    "on-primary": "#611200",
+                    "on-tertiary-fixed-variant": "#7000a7",
+                    "on-background": "#e4e1e6",
+                    "secondary": "#d3fbff",
+                    "inverse-primary": "#b42900",
+                    "inverse-on-surface": "#303033",
+                    "surface-container": "#1f1f22",
+                    "surface-container-high": "#2a2a2d",
+                    "on-tertiary": "#4f0077",
+                    "on-tertiary-fixed": "#30004b",
+                    "on-surface-variant": "#e7bdb3",
+                    "surface-container-low": "#1b1b1e",
+                    "on-secondary-fixed": "#002022",
+                    "inverse-surface": "#e4e1e6"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "offset-depth": "6px",
+                    "gutter": "24px",
+                    "unit": "4px",
+                    "margin": "32px",
+                    "container-max": "1440px"
+            },
+            "fontFamily": {
+                    "label-bold": ["Space Grotesk"],
+                    "display-xl": ["Space Grotesk"],
+                    "body-md": ["Be Vietnam Pro"],
+                    "headline-lg": ["Space Grotesk"],
+                    "headline-md": ["Space Grotesk"],
+                    "body-lg": ["Be Vietnam Pro"]
+            },
+            "fontSize": {
+                    "label-bold": ["14px", {"lineHeight": "1.0", "fontWeight": "700"}],
+                    "display-xl": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-lg": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .speed-lines {
+            background-image: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255, 62, 0, 0.05) 10px, rgba(255, 62, 0, 0.05) 11px);
+        }
+        .skew-container {
+            transform: skewX(-2deg);
+        }
+        .unskew-content {
+            transform: skewX(2deg);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary-container selection:text-on-primary-container">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 left-0 w-full z-[100] flex justify-between items-center px-8 py-4 bg-zinc-950/90 backdrop-blur-md border-b-4 border-black dark:border-zinc-800 shadow-[4px_4px_0px_0px_#FF3E00]">
+<div class="text-3xl font-black italic text-orange-600 dark:text-orange-500 skew-x-[-6deg] font-['Space_Grotesk'] tracking-tighter">
+            SHOGUN_STREAM
+        </div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-['Space_Grotesk'] font-bold uppercase tracking-tighter text-zinc-100 opacity-70 hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all duration-100" href="#">Browse</a>
+<a class="font-['Space_Grotesk'] font-bold uppercase tracking-tighter text-orange-600 dark:text-orange-500 border-b-4 border-orange-600 dark:border-orange-500 hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all duration-100" href="#">Simulcasts</a>
+<a class="font-['Space_Grotesk'] font-bold uppercase tracking-tighter text-zinc-100 opacity-70 hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all duration-100" href="#">Manga</a>
+<a class="font-['Space_Grotesk'] font-bold uppercase tracking-tighter text-zinc-100 opacity-70 hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all duration-100" href="#">News</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-on-background hover:text-primary transition-colors">notifications</button>
+<button class="material-symbols-outlined text-on-background hover:text-primary transition-colors">account_circle</button>
+<button class="hidden lg:block bg-primary-container text-on-primary-container font-label-bold px-6 py-2 uppercase border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all">GO_PRO</button>
+</div>
+</nav>
+<main class="pt-28 min-h-screen speed-lines">
+<!-- Hero Section -->
+<header class="px-8 mb-12">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 border-l-8 border-orange-600 pl-6">
+<div>
+<h1 class="font-display-xl text-display-xl uppercase italic leading-none mb-2 text-white">SIMULCAST_SCHEDULE</h1>
+<p class="font-body-lg text-body-lg text-zinc-400 max-w-xl">Zero delay. Pure adrenaline. Track the latest strikes from the front lines of neo-Tokyo.</p>
+</div>
+<div class="bg-zinc-900 border-4 border-black p-4 skew-x-[-4deg] shadow-[6px_6px_0px_0px_#FF3E00]">
+<div class="unskew-content">
+<span class="font-label-bold text-orange-500 block">LOCAL TIME ZONE</span>
+<span class="font-headline-md text-headline-md text-white">UTC +09:00 TOKYO</span>
+</div>
+</div>
+</div>
+</header>
+<!-- Weekly Calendar Navigation -->
+<section class="px-8 mb-16 overflow-x-auto">
+<div class="flex gap-4 pb-4">
+<button class="flex-1 min-w-[120px] bg-zinc-900 border-4 border-black p-4 text-center hover:bg-zinc-800 transition-colors">
+<span class="block font-label-bold text-zinc-500 text-xs">OCT 21</span>
+<span class="block font-headline-md text-zinc-100 italic">MON</span>
+</button>
+<button class="flex-1 min-w-[120px] bg-zinc-900 border-4 border-black p-4 text-center hover:bg-zinc-800 transition-colors">
+<span class="block font-label-bold text-zinc-500 text-xs">OCT 22</span>
+<span class="block font-headline-md text-zinc-100 italic">TUE</span>
+</button>
+<button class="flex-1 min-w-[120px] bg-primary-container border-4 border-black p-6 text-center shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] -translate-y-2">
+<span class="block font-label-bold text-on-primary-container text-xs">OCT 23</span>
+<span class="block font-headline-md text-on-primary-container italic font-black">WED</span>
+<div class="h-1 bg-black mt-2 mx-auto w-8"></div>
+</button>
+<button class="flex-1 min-w-[120px] bg-zinc-900 border-4 border-black p-4 text-center hover:bg-zinc-800 transition-colors">
+<span class="block font-label-bold text-zinc-500 text-xs">OCT 24</span>
+<span class="block font-headline-md text-zinc-100 italic">THU</span>
+</button>
+<button class="flex-1 min-w-[120px] bg-zinc-900 border-4 border-black p-4 text-center hover:bg-zinc-800 transition-colors">
+<span class="block font-label-bold text-zinc-500 text-xs">OCT 25</span>
+<span class="block font-headline-md text-zinc-100 italic">FRI</span>
+</button>
+<button class="flex-1 min-w-[120px] bg-zinc-900 border-4 border-black p-4 text-center hover:bg-zinc-800 transition-colors">
+<span class="block font-label-bold text-zinc-500 text-xs">OCT 26</span>
+<span class="block font-headline-md text-zinc-100 italic">SAT</span>
+</button>
+<button class="flex-1 min-w-[120px] bg-zinc-900 border-4 border-black p-4 text-center hover:bg-zinc-800 transition-colors">
+<span class="block font-label-bold text-zinc-500 text-xs">OCT 27</span>
+<span class="block font-headline-md text-zinc-100 italic">SUN</span>
+</button>
+</div>
+</section>
+<!-- Main Schedule Content -->
+<section class="px-8 pb-24">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+<!-- Card 1: Premiere -->
+<div class="group relative bg-zinc-900/80 border-2 border-zinc-800 hover:border-primary transition-all duration-300">
+<div class="absolute -top-3 -left-3 z-10 bg-yellow-400 text-black font-label-bold px-3 py-1 border-2 border-black skew-x-[-12deg]">
+                        PREMIERE
+                    </div>
+<div class="aspect-video overflow-hidden border-b-4 border-black relative">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Cinematic high-contrast anime style shot of a samurai standing in a rainy cyberpunk alleyway with neon orange lights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6b0iqACykcdK2x-XpUbg3LalyiArfq2tVYdntiJi6pmw-TJKAUKdePIlY5vSaQgtuw-CYWbIo62yxQfyjT1Yf_Y1c50KUQEORQgIjpZRogNvHVoxMvZP6CahtPI1KLXpbyUfD_twDT112m9m1tBl4ahsITd7cKbMTk6IT-7Z52CHG2SIHK6QbXdyA4E5KgGidkhRpDRY48vIoBVCVQDHpxwfPiidzd83k4iXERniIvVMKEznR6PpQCraYgfD86rdl-9fTqkgDqsM"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+<div class="absolute bottom-3 right-3 bg-black/90 border border-primary px-3 py-1 font-label-bold text-primary text-xs">
+                            LIVE IN 02:45:12
+                        </div>
+</div>
+<div class="p-6">
+<span class="font-label-bold text-primary mb-2 block uppercase">Action / Supernatural</span>
+<h3 class="font-headline-md text-white mb-1 group-hover:text-primary transition-colors">RONIN_ZERO: ASCENSION</h3>
+<p class="font-body-md text-zinc-500 mb-6 uppercase">Episode 01 / "The First Blade"</p>
+<button class="w-full bg-zinc-800 border-b-4 border-r-4 border-black p-3 font-label-bold text-white hover:bg-zinc-700 active:translate-x-[2px] active:translate-y-[2px] active:border-0 transition-all uppercase">
+                            Set Reminder
+                        </button>
+</div>
+</div>
+<!-- Card 2: Trending -->
+<div class="group relative bg-zinc-900/80 border-2 border-zinc-800 hover:border-primary transition-all duration-300">
+<div class="aspect-video overflow-hidden border-b-4 border-black relative">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Digital illustration of a futuristic city skyline at night with massive holographic advertisements and flying vehicles" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCaTCEJjKeXbR4eWXKsXpuGKDRP0-nlhocJEYlEDSWvd68to0zmCTTpj6BjMD5iQeXBV2dTKohz5sCNOb5i0JSKwDqPlNK7kI4S1ZLHG2jjE3e3LZqH7Pe-HcDD2O-lpa72LT90N5WrwCNhmZ6Ya8Fl9QIXmcMXVpK2R_IpkhgtEeYxHSOzHl_jXGdd7CJEK4d8MlRak16WPKs1hv2xhPPh1k_Rbk6VLC0Soqhlrv1ZaYf3f5GTulJ764WMFHj60kVGxpfCvsOiqY"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+<div class="absolute bottom-3 right-3 bg-black/90 border border-primary px-3 py-1 font-label-bold text-primary text-xs">
+                            LIVE IN 05:12:00
+                        </div>
+</div>
+<div class="p-6">
+<span class="font-label-bold text-secondary-fixed mb-2 block uppercase">Sci-Fi / Thriller</span>
+<h3 class="font-headline-md text-white mb-1 group-hover:text-primary transition-colors">CYBER_PULSE_2099</h3>
+<p class="font-body-md text-zinc-500 mb-6 uppercase">Episode 14 / "Ghost in the Wire"</p>
+<button class="w-full bg-zinc-800 border-b-4 border-r-4 border-black p-3 font-label-bold text-white hover:bg-zinc-700 active:translate-x-[2px] active:translate-y-[2px] active:border-0 transition-all uppercase">
+                            View Series
+                        </button>
+</div>
+</div>
+<!-- Card 3: Final Episode -->
+<div class="group relative bg-zinc-900/80 border-2 border-zinc-800 hover:border-primary transition-all duration-300">
+<div class="absolute -top-3 -right-3 z-10 bg-primary-container text-on-primary-container font-label-bold px-3 py-1 border-2 border-black skew-x-[12deg]">
+                        FINAL EPISODE
+                    </div>
+<div class="aspect-video overflow-hidden border-b-4 border-black relative">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Aggressive manga style illustration of a dragon silhouette against a blood red sun and charcoal clouds" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZ3UHduCgkRQhuupD0dJLpeJntGq6Js96cDs_I3RUYRsAJ4b6TvrwBI9gA8dG405VrHeI9JmaqpaXvl-LPXabPZuFJM8YEuutl9oOQA1wRYyX9U9-Ih-woCfLXmJexnAOnEgR79TKcTfiJKENhYMu1FKVfN6OUzQKwlUDCS-np2CEGTrX4-rHqAaxWlpWQ0ANmNTqlPWBC7umYZTzlfvwNh55z86CX57EhSDTHabIPsBXWOLX-I-APgYiorx4htzVmY5-pbsU0OMI"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+<div class="absolute bottom-3 right-3 bg-black/90 border border-primary px-3 py-1 font-label-bold text-primary text-xs">
+                            LIVE IN 12:30:45
+                        </div>
+</div>
+<div class="p-6">
+<span class="font-label-bold text-tertiary-container mb-2 block uppercase">Fantasy / Drama</span>
+<h3 class="font-headline-md text-white mb-1 group-hover:text-primary transition-colors">DRAGON_FALL: REDUX</h3>
+<p class="font-body-md text-zinc-500 mb-6 uppercase">Episode 24 / "Eternal Horizon"</p>
+<button class="w-full bg-primary-container border-b-4 border-r-4 border-black p-3 font-label-bold text-on-primary-container hover:bg-orange-400 active:translate-x-[2px] active:translate-y-[2px] active:border-0 transition-all uppercase">
+                            WATCH FINALE
+                        </button>
+</div>
+</div>
+<!-- Card 4: Normal -->
+<div class="group relative bg-zinc-900/80 border-2 border-zinc-800 hover:border-primary transition-all duration-300">
+<div class="aspect-video overflow-hidden border-b-4 border-black relative">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Soft focused anime background of a high school classroom at dusk with long orange shadows stretching across wooden desks" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIOfCoqgd0-7WobS84r8E6-nUSYNkqbmdkCACOs9bzdjSIk2RIT-LzkM-sNTsHs7Dm_K_D15EE75INUv22Ct05lquR3SCe3d0CMJKa2QgXy2FuDVN3yGwPV5FAhoNLCAfidZoE1EfYJ3C02QzSWT31rMzEteQb_Ed1x0Hth6PHTlxBYL1eY7Oo_e8jWcpBuO2763DrpeMaJUgXUbAQB7VTuDcQTviH9u46-UKh36KXitFHrlXM-CxnfjfUOCVFllQozmQJbg5TKLo"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+<div class="absolute bottom-3 right-3 bg-black/90 border border-primary px-3 py-1 font-label-bold text-primary text-xs">
+                            LIVE IN 18:00:00
+                        </div>
+</div>
+<div class="p-6">
+<span class="font-label-bold text-zinc-400 mb-2 block uppercase">Slice of Life / Romance</span>
+<h3 class="font-headline-md text-white mb-1 group-hover:text-primary transition-colors">AFTER_SCHOOL_BLUES</h3>
+<p class="font-body-md text-zinc-500 mb-6 uppercase">Episode 08 / "Yesterday's Rain"</p>
+<button class="w-full bg-zinc-800 border-b-4 border-r-4 border-black p-3 font-label-bold text-white hover:bg-zinc-700 active:translate-x-[2px] active:translate-y-[2px] active:border-0 transition-all uppercase">
+                            Set Reminder
+                        </button>
+</div>
+</div>
+<!-- Card 5: Normal -->
+<div class="group relative bg-zinc-900/80 border-2 border-zinc-800 hover:border-primary transition-all duration-300">
+<div class="aspect-video overflow-hidden border-b-4 border-black relative">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Epic wide shot of a futuristic sports arena with massive floodlights and glowing electric blue energy trails" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwr6LBmfhoRLyu37x9PpJkTXoNjbT4rbVvKgZiGhLCoq5MjiogmJ8CRBYO9qX2-TwGAhquWOah5SqneC_nicl2Ae4EtzzY1K9cjpFINAGzGYo2XxawZ3oLyiUilknW3e9UUP6X8gGMJGOoS1BdKUsfl-2iJwfWnnQ-3h9nKmqZPRyETH6ReTezAdEpaZO5hQrhMTukzPP0ahc2JIT0tyn3HrTVqx-vv3wFcJtaEI_LxVaIell5IR9cUuqYgfwMA2GF-qUZZxxfHY4"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+<div class="absolute bottom-3 right-3 bg-black/90 border border-primary px-3 py-1 font-label-bold text-primary text-xs">
+                            LIVE IN 20:15:00
+                        </div>
+</div>
+<div class="p-6">
+<span class="font-label-bold text-secondary-container mb-2 block uppercase">Sports / Shonen</span>
+<h3 class="font-headline-md text-white mb-1 group-hover:text-primary transition-colors">NEO_STRIKERS</h3>
+<p class="font-body-md text-zinc-500 mb-6 uppercase">Episode 42 / "Maximum Overdrive"</p>
+<button class="w-full bg-zinc-800 border-b-4 border-r-4 border-black p-3 font-label-bold text-white hover:bg-zinc-700 active:translate-x-[2px] active:translate-y-[2px] active:border-0 transition-all uppercase">
+                            View Series
+                        </button>
+</div>
+</div>
+<!-- Card 6: Premiere -->
+<div class="group relative bg-zinc-900/80 border-2 border-zinc-800 hover:border-primary transition-all duration-300">
+<div class="absolute -top-3 -left-3 z-10 bg-yellow-400 text-black font-label-bold px-3 py-1 border-2 border-black skew-x-[-12deg]">
+                        PREMIERE
+                    </div>
+<div class="aspect-video overflow-hidden border-b-4 border-black relative">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Ethereal landscape with floating islands and purple waterfalls in a digital fantasy art style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBN_5Uo3z7wduyQ4QuFIKdaTrY6qfAv3PSihWf0y278t1aRCbm9lIX8h2TM4CXsm4uYcSwSnvQDv61JqrYLLLpWXg5UURtlsyPgj6Wj0rMjQSuPNNblqc5gy8bxfD6Eb8Lzrvod-jbV9LI76goBLy5UZeL4QAreK6PGLLggoELH8OyHPerL_MuWUEW-Sw9paJRGqIyUwXmgjRyiyDDXR_XnIyyVYLbkAvNU8dCE-xrOdJbIDgjwfFwZ9W_tg9bsZ__392IL5Zt1TKc"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+<div class="absolute bottom-3 right-3 bg-black/90 border border-primary px-3 py-1 font-label-bold text-primary text-xs">
+                            LIVE IN 22:40:10
+                        </div>
+</div>
+<div class="p-6">
+<span class="font-label-bold text-tertiary mb-2 block uppercase">Isekai / Adventure</span>
+<h3 class="font-headline-md text-white mb-1 group-hover:text-primary transition-colors">A_WORLD_UNSEEN</h3>
+<p class="font-body-md text-zinc-500 mb-6 uppercase">Episode 01 / "The Rebirth"</p>
+<button class="w-full bg-zinc-800 border-b-4 border-r-4 border-black p-3 font-label-bold text-white hover:bg-zinc-700 active:translate-x-[2px] active:translate-y-[2px] active:border-0 transition-all uppercase">
+                            Set Reminder
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter / Notification Section -->
+<section class="px-8 mb-24">
+<div class="bg-zinc-950 border-8 border-black p-12 relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-8">
+<div class="absolute top-0 right-0 w-64 h-full bg-primary-container/20 -skew-x-[20deg] translate-x-32"></div>
+<div class="relative z-10">
+<h2 class="font-display-xl text-4xl uppercase italic mb-4">NEVER_MISS_A_BEAT.</h2>
+<p class="font-body-lg text-zinc-400 max-w-lg">Get real-time mobile alerts for your tracked simulcasts. Direct from the source to your ocular implants.</p>
+</div>
+<div class="relative z-10 w-full md:w-auto">
+<div class="flex flex-col sm:flex-row gap-0 border-4 border-black">
+<input class="bg-zinc-900 text-white font-label-bold px-6 py-4 border-0 focus:ring-2 focus:ring-primary-container w-full sm:min-w-[300px]" placeholder="ENTER_COORDS@EMAIL.COM" type="email"/>
+<button class="bg-primary-container text-on-primary-container font-black px-8 py-4 uppercase hover:bg-orange-400 transition-colors">INITIATE</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 px-8 flex flex-col md:flex-row justify-between items-center gap-6 bg-zinc-950 border-t-8 border-black dark:border-zinc-900">
+<div class="flex flex-col gap-2">
+<div class="text-xl font-black text-orange-600 font-['Space_Grotesk']">SHOGUN_STREAM</div>
+<p class="font-['Space_Grotesk'] text-xs font-bold uppercase text-zinc-500">© 2024 SHOGUN_STREAM. BORN IN THE CHAOS.</p>
+</div>
+<div class="flex gap-8">
+<a class="font-['Space_Grotesk'] text-xs font-bold uppercase text-zinc-500 hover:text-orange-400 transition-colors" href="#">Privacy</a>
+<a class="font-['Space_Grotesk'] text-xs font-bold uppercase text-zinc-500 hover:text-orange-400 transition-colors" href="#">Terms</a>
+<a class="font-['Space_Grotesk'] text-xs font-bold uppercase text-zinc-500 hover:text-orange-400 transition-colors" href="#">Support</a>
+<a class="font-['Space_Grotesk'] text-xs font-bold uppercase text-zinc-500 hover:text-orange-400 transition-colors" href="#">Careers</a>
+</div>
+<div class="flex gap-4">
+<button class="p-2 border-2 border-zinc-800 text-zinc-500 hover:text-primary hover:border-primary transition-all">
+<span class="material-symbols-outlined">public</span>
+</button>
+<button class="p-2 border-2 border-zinc-800 text-zinc-500 hover:text-primary hover:border-primary transition-all">
+<span class="material-symbols-outlined">share</span>
+</button>
+</div>
+</footer>
+</body></html>
