@@ -14,12 +14,30 @@ A bold and modern anime web portal featuring SHONEN_PULSE - a dynamic web applic
 
 ```
 stitch_anime_motion_portal/
-├── code.html           # Main homepage
-├── Page 2.html         # Secondary page
-├── Page 3.html         # Additional content page
-├── Page 4.html         # Final section
-└── README.md           # Project documentation
+├── code.html           # Main homepage (LATEST)
+├── Page 2.html         # Series page
+├── Page 3.html         # Manga page
+├── Page 4.html         # Browse page
+├── Page 5.html         # News page
+├── Page 6.html         # Services page
+├── README.md           # Project documentation
+├── video3.mp4          # Background video for Page 6
+├── videoplayback.mp4   # Background video for homepage
+├── videoplayback2.mp4  # Additional video content
+├── video.jpg           # Video thumbnail
+└── screen.png          # Screenshot
 ```
+
+## 🧭 Navigation Structure
+
+All pages are fully linked with consistent navigation:
+
+- **LATEST** (code.html) - Main homepage with latest content
+- **SERIES** (Page 2.html) - Anime series collection
+- **MANGA** (Page 3.html) - Manga content and reading
+- **BROWSE** (Page 4.html) - Browse and simulcast schedule
+- **NEWS** (Page 5.html) - Latest news and updates
+- **SERVICES** (Page 6.html) - Platform services and features
 
 ## 🛠️ Technologies Used
 
